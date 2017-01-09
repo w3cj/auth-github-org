@@ -47,6 +47,7 @@ module.exports = {
   //   first_name: 'John',
   //   last_name: 'Doe',
   //   avatar_url: 'http://fillmurray.com/200/200',
+  //   email: 'john.doe@email.com',
   //   github_id: 'abc123456'
   // }
   // Providing createUserFromProfile in the config is optional.

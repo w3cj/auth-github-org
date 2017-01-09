@@ -42,7 +42,8 @@ function config(authConfig) {
     return {
       clientID: authConfig.client_id,
       clientSecret: authConfig.client_secret,
-      callbackURL: `${authConfig.auth_URL}${client}/github/callback`
+      callbackURL: `${authConfig.auth_URL}${client}/github/callback`,
+      scope: 'user:email'
     };
   }
 
