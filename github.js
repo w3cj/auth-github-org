@@ -32,6 +32,7 @@ function config(authConfig) {
           (err, token) => {
             if (err) return next(err);
             res.cookie('x-auth-token', token);
+            res.set('x-auth-token', token);
             res.redirect(clientURL);
           });
       })(req, res, next);

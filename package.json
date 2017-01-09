@@ -1,6 +1,6 @@
 {
   "name": "auth-github-org",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Add github login to your express app restricted to specific github organization(s). Powered by passport and passport-github2.",
   "main": "index.js",
   "repository": {
