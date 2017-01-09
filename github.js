@@ -31,8 +31,14 @@ function config(authConfig) {
         jwt.sign(user, authConfig.token_secret, {},
           (err, token) => {
             if (err) return next(err);
-            res.cookie('x-auth-token', token);
-            res.set('x-auth-token', token);
+
+            let options;
+
+            if(authConfig.cookieOptions) {
+              options = authConfig.cookieOptions
+            }
+
+            res.cookie('x-auth-token', token, options);
             res.redirect(clientURL);
           });
       })(req, res, next);
