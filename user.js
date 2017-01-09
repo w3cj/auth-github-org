@@ -6,7 +6,7 @@ function createUserFromProfile(profile) {
   const first_name = names[0];
   const last_name = names.length > 1 ? names[names.length - 1] : '';
   const avatar_url = profile._json && profile._json.avatar_url ? profile._json.avatar_url : '';
-  const email = profile._json.email ? profile._json.email : profile._json.emails[0].value;
+  const email = profile._json.email ? profile._json.email : profile.emails[0].value;
 
   return {
     first_name,
